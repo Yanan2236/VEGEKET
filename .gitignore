@@ -1,0 +1,43 @@
+# === Python / Django ===
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+db.sqlite3
+.env
+*.env
+
+# Django collected static files
+/staticfiles/
+/media/
+
+# === Node / Tailwind ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+/static/dist/output.css
+
+# === VSCode / Editor ===
+.vscode/
+*.code-workspace
+.idea/
+
+# === Docker ===
+# Docker関連の生成物は無視するが設定ファイルは含める
+*.pid
+*.seed
+*.pid.lock
+*.sock
+*.swp
+*.swo
+*.DS_Store
+
+# === System / OS ===
+Thumbs.db
+.DS_Store

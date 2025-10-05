@@ -1,0 +1,38 @@
+# === Python / Django ===
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+
+# === Node / Tailwind ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+# Tailwindの出力ファイル（再ビルドで生成されるので除外OK）
+static/dist/output.css
+
+# === System / Editor ===
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# === Git ===
+.git
+.gitignore
+
+# === その他（不要な一時ファイル類） ===
+__MACOSX/
+*.tmp
+*.bak
