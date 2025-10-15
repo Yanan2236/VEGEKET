@@ -17,7 +17,7 @@ class Tag(models.Model):
         return self.name
     
 
-class Category(models.Model): # slugField 欲しいかも
+class Category(models.Model):
     slug = models.CharField(primary_key=True, max_length=32)
     name = models.CharField(max_length=32)
 
