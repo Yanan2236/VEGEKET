@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+ 
+{% block content %}
+
+{% for object in object_list %}
+<p>
+  <a href="/items/{{object.pk}}/">
+    {{ object.name }} - ¥{{ object.price }}
+  </a>
+</p>
+{% endfor %}
+ 
+{% endblock %}
