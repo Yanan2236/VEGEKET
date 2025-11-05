@@ -1,13 +1,16 @@
 {% extends 'base.html' %}
  
-{% block content %}
-
-{% for object in object_list %}
-<p>
-  <a href="/items/{{object.pk}}/">
-    {{ object.name }} - ¥{{ object.price }}
-  </a>
-</p>
-{% endfor %}
+{% block main %}
  
+{% include 'snippets/headline.html' %}
+ 
+<div>
+  <div>
+    {% for object in object_list %}
+    <div>
+      {% include 'snippets/item_box.html' %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
 {% endblock %}
