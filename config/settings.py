@@ -1,6 +1,7 @@
 from pathlib import Path
 import environ  # 追記
 from django.contrib import messages
+import os
  
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -10,10 +11,10 @@ env = environ.Env()
 root = environ.Path(BASE_DIR / 'secrets')
  
 # 本番環境用
-# env.read_env(root('.env.prod'))
+env.read_env(root('.env.prod'))
  
 # 開発環境用
-env.read_env(root('.env.dev'))
+# env.read_env(root('.env.dev'))
  
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -122,7 +123,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
  
 STATICFILES_DIRS = [BASE_DIR / 'static']  # 追記
- 
+
+STATIC_ROOT = os.path.join(BASE_DIR / 'staticfiles')
+
+
 # 消費税率
 TAX_RATE = 0.1
  
