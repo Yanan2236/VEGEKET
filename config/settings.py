@@ -126,6 +126,8 @@ STATICFILES_DIRS = [BASE_DIR / 'static']  # 追記
 
 STATIC_ROOT = os.path.join(BASE_DIR / 'staticfiles')
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # 消費税率
 TAX_RATE = 0.1

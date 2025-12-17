@@ -6,8 +6,7 @@ def generate_unique_id():
     return get_random_string(length=22)
 
 def upload_image_to(instance, filename):
-    item_id = instance.item.id
-    return os.path.join('static', 'items', item_id, filename)
+    return os.path.join('items', str(instance.pk), filename)
 
 class Tag(models.Model):
     slug = models.CharField(primary_key=True, max_length=32)
@@ -35,7 +34,7 @@ class Item(models.Model):
     is_published = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    image = models.ImageField(upload_to=upload_image_to, default="", blank=True)
+    image = models.ImageField(upload_to=upload_image_to, default="", blank=True,null=True)
 
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, related_name='items', null=True, blank=True)
     tags = models.ManyToManyField(Tag, related_name='items', blank=True)
