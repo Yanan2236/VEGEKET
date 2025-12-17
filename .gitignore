@@ -44,3 +44,4 @@ yarn-error.log*
 # === System / OS ===
 Thumbs.db
 .DS_Store
+venv/
